@@ -2,19 +2,25 @@
 <rss version="2.0">
 <channel>
     <title>사이트 RSS 피드</title>
-    <link>https://sili078.github.io/</link>
+    <link>https://sili078.github.io</link>
     <description>새로 생성된 파일들의 RSS 피드</description>
     <item>
+        <title>파일 3</title>
+        <link>https://sili078.github.io/1/3.html</link>
+        <description>3.html 설명</description>
+        <pubDate>Tue, 17 Sep 2024 21:24:11 +0900</pubDate>
+    </item>
+    <item>
         <title>파일 2</title>
-        <link>https://sili078.github.io/2.html</link>
+        <link>https://sili078.github.io/1/2.html</link>
         <description>2.html 설명</description>
-        <pubDate>Mon, 16 Sep 2024 23:31:10 +0900</pubDate>
+        <pubDate>Tue, 17 Sep 2024 21:24:11 +0900</pubDate>
     </item>
     <item>
         <title>파일 1</title>
-        <link>https://sili078.github.io/1.html</link>
+        <link>https://sili078.github.io/1/1.html</link>
         <description>1.html 설명</description>
-        <pubDate>Mon, 16 Sep 2024 23:31:10 +0900</pubDate>
+        <pubDate>Tue, 17 Sep 2024 21:24:11 +0900</pubDate>
     </item>
 </channel>
 </rss>
