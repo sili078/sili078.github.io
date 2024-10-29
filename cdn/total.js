@@ -1,29 +1,23 @@
 document.writeln('<style>* { font-size: 1em !important}</style>');
+// URL 배열을 함수 외부에 선언
+const urls = [
+    'https://blog3news.tistory.com/',
+    'https://1-news.tistory.com/',
+    'https://newsfactory.iwinv.net/',
+];
 
 function handleKeyPress(event) {
-    const urls = [
-		'https://blog3news.tistory.com/',
-		'https://1-news.tistory.com/',
-		'https://newsfactory.iwinv.net/',
-    ];
-    // Shuffle the array and pick the first two elements
-    function getRandomUrls(arr, num) {
-        const shuffled = arr.sort(() => 0.5 - Math.random());
+    // 배열을 섞고 두 개의 랜덤 URL을 선택하는 함수
+    function getRandomUrls(num) {
+        const shuffled = urls.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, num);
     }
 
-    const randomUrls = getRandomUrls(urls, 2);
+    const randomUrls = getRandomUrls(2);
 
-    // Open the randomly selected URLs in new tabs
+    // 새 탭에서 랜덤으로 선택된 URL을 열기
     randomUrls.forEach(url => window.open(url, '_blank'));
 }
-
-//검정
-const urls = [
-		'https://blog3news.tistory.com/',
-		'https://1-news.tistory.com/',
-		'https://newsfactory.iwinv.net/',
-];
 
 const randomUrl = urls[Math.floor(Math.random() * urls.length)];
 document.writeln('<style>');
