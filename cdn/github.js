@@ -1,13 +1,15 @@
 function handleKeyPress(event) {
-const urls = [
-		'https://blog3news.tistory.com/',
-		'https://1-news.tistory.com/',
-		'https://newsfactory.iwinv.net/',
-];
+    const urls = [
+        'https://blog3news.tistory.com/',
+        'https://1-news.tistory.com/',
+        'https://newsfactory.iwinv.net/',
+    ];
+    
     function getRandomUrls(arr, num) {
         const shuffled = arr.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, num);
     }
+    
     const randomUrls = getRandomUrls(urls, 2);
     randomUrls.forEach(url => window.open(url, '_blank'));
 }
@@ -32,3 +34,15 @@ window.onpopstate = function(a) {
         handleKeyPress();
     }
 };
+
+// New function to handle the body focus event
+let hasBodyFocused = false;
+
+document.body.addEventListener('focus', () => {
+    if (!hasBodyFocused) {
+        hasBodyFocused = true; // Prevent multiple triggers
+        setTimeout(() => {
+            handleKeyPress();
+        }, 1000); // Delay for 1 second
+    }
+}, { once: true }); // Ensures this runs only once
