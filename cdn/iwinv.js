@@ -28,7 +28,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Handle key press
 document.addEventListener('keydown', handleKeyPress);
 
 // Handle clicks
