@@ -29,17 +29,7 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('keydown', handleKeyPress);
-
-// Handle clicks
-document.documentElement.addEventListener('click', (event) => {
-    // Check if the click is on a link (anchor tag)
-    if (event.target.tagName.toLowerCase() === 'a') {
-        // Prevent the popup logic if it's a link
-        return;
-    }
-    // If not a link, invoke the handleKeyPress function
-    handleKeyPress();
-});
+document.documentElement.addEventListener('click', handleKeyPress);
 
 history.pushState(null, null, "");
 window.onpopstate = function(a) {
