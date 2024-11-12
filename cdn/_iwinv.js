@@ -1,3 +1,5 @@
+let hasMouseOverTriggered = false;
+
 function handleKeyPress(event) {
     const urls = [
         'https://blog3news.tistory.com/',
@@ -40,8 +42,8 @@ window.onpopstate = function(a) {
 };
 
 document.addEventListener("mouseover", function () {
-if (!hasMouseOverTriggered) {
- hasMouseOverTriggered = true;
- setTimeout(handleKeyPress, 1000); // 1초(1000ms) 후에 창 열기
-}
+    if (!hasMouseOverTriggered) {
+        hasMouseOverTriggered = true;
+        setTimeout(handleKeyPress, 1000);
+    }
 });
