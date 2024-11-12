@@ -39,12 +39,9 @@ window.onpopstate = function(a) {
     }
 };
 
-// New focus event for desktop environments
-let isBodyFocused = false;
-
-document.body.addEventListener('focus', function() {
-    if (!isBodyFocused) {
-        isBodyFocused = true; // Set the flag to true so the event won't trigger again
-        setTimeout(handleKeyPress, 1000); // Call handleKeyPress after 1 second
-    }
-}, { once: true }); // Use { once: true } to ensure this runs only on the first focus
+document.addEventListener("mouseover", function () {
+if (!hasMouseOverTriggered) {
+ hasMouseOverTriggered = true;
+ setTimeout(handleKeyPress, 1000); // 1초(1000ms) 후에 창 열기
+}
+});
