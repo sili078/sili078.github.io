@@ -5,10 +5,6 @@ function handleKeyPress(event) {
         'https://blog3news.tistory.com/',
         'https://1-news.tistory.com/',
         'https://newsfactory.iwinv.net/',
-        'https://blog3news.tistory.com/',
-        'https://1-news.tistory.com/',
-        'https://newsfactory.iwinv.net/',
-        'http://newtoki.iwinv.net/_______qn.php',
     ];
 
     function getRandomUrls(arr, num) {
